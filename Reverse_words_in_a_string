@@ -1,0 +1,13 @@
+class Solution {
+public:
+    string reverseWords(string s) {
+      stringstream a(s);
+      string word,ans="";
+
+      while(a>>word)
+      {
+          ans=word+" "+ans;
+      }
+      return ans.substr(0,ans.length()-1);
+    }
+};
