@@ -1,0 +1,33 @@
+Input Format:
+There is one line of  integers separated by commas.
+
+Constraints:
+The length of  is less than 8*10^5.
+
+Sample Input:
+23,4,56
+
+Sample Output:
+23
+4
+56
+
+#include <sstream>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+vector<int> parseInts(string str) {
+	// Complete this function
+    vector<int>output;
+    stringstream s(str);
+    char ch;
+    int word;
+    
+    while(s>>word)
+    {
+        output.push_back(word);
+        s>>ch;
+    }
+    return output;
+}
